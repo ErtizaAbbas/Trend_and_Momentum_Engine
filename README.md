@@ -7,7 +7,7 @@
 
 ---
 
-## 1. Algorithmic System Overview & Philosophy
+##  Algorithmic System Overview & Philosophy
 
 The **TME Trend & Momentum Engine** is an institutional-grade, multi-asset quantitative trading framework engineered specifically for professional desks and retail traders. Running strictly on the **Daily (1D) timeframe**, TME rejects the over-fitted assumptions of institutional black-box models. 
 
@@ -23,12 +23,12 @@ The engine operates natively across a diverse, non-correlated multi-asset sandbo
 
 ---
 
-## 2. Mathematical Pipeline & Filter Framework
+##  Mathematical Pipeline & Filter Framework
 
 Every evening at the market close, the engine processes asset matrices through a three-layer qualification framework before generating order matrices.
 
 
-## 5. Environment Provisioning & Quick Start
+##  Environment Provisioning & Quick Start
 
 The repository includes a cross-platform Bash bootstrapper (`deploy.sh`) that checks for a clean Python installation, builds an isolated virtual environment (`.venv`), upgrades your system compilers, and installs every package required to execute the models with a single terminal command.
 
