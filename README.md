@@ -62,18 +62,22 @@ jupyter lab
 
 ### Quick Start Code Engine Interface
 
-To call the core framework or integrate your data pipelines inside a separate script file, import and run the system object:
+To call the core framework or integrate your data pipelines inside a separate script file, ensure the `UnifiedAbbasEngine` structural class is imported or declared in your execution directory:
 
 ```python
-# Ingest the unified TME system framework
-from tme_engine import UnifiedAbbasEngine
+# Import the unified engine class from your python module framework
+# Note: If running directly inside a separate file, ensure core_engine.py helper is present
+from core_engine import UnifiedAbbasEngine
 
-# Initialize the engine targeting a \$100,000 professional desk
+# Initialize the engine targeting a \$100,000 professional trading desk base
 tme_system = UnifiedAbbasEngine(initial_equity=100000.0, risk_parameter=0.01)
 
 # Generate active matrix order book brackets across global watchlists
 active_dashboard_df = tme_system.process_live_market_matrix()
+
+# Print out your volatility brackets and position sizes
 print(active_dashboard_df.to_string(index=False))
 ```
+
 
 
