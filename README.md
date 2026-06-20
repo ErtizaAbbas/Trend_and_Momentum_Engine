@@ -27,3 +27,53 @@ The engine operates natively across a diverse, non-correlated multi-asset sandbo
 
 Every evening at the market close, the engine processes asset matrices through a three-layer qualification framework before generating order matrices.
 
+
+## 5. Environment Provisioning & Quick Start
+
+The repository includes a cross-platform Bash bootstrapper (`deploy.sh`) that checks for a clean Python installation, builds an isolated virtual environment (`.venv`), upgrades your system compilers, and installs every package required to execute the models with a single terminal command.
+
+### Automated Local Deployment
+
+To provision your workspace environment automatically using Git Bash (Windows), macOS, or Linux, execute the following sequence inside your local directory:
+
+```bash
+# 1. Provide local execution permissions to the bootstrapper script
+chmod +x deploy.sh
+
+# 2. Run the automated deployment pipeline
+./deploy.sh
+```
+
+### Manual Operational Interface
+
+Once the deployment sequence signals a successful completion state, activate your virtual environment partition and open the interactive quantitative notebook workspace:
+
+```bash
+# Activate the isolated virtual environment sandbox
+# For Windows (Git Bash):
+source .venv/Scripts/activate
+
+# For macOS / Linux:
+source .venv/bin/activate
+
+# Boot the Jupyter Lab workspace visualization console
+jupyter lab
+```
+
+### Quick Start Code Engine Interface
+
+To call the core framework or integrate your data pipelines inside a separate script file, import and run the system object:
+
+```python
+# Ingest the unified TME system framework
+from tme_engine import UnifiedAbbasEngine
+
+# Initialize the engine targeting a \$100,000 professional desk
+tme_system = UnifiedAbbasEngine(initial_equity=100000.0, risk_parameter=0.01)
+
+# Generate active matrix order book brackets across global watchlists
+active_dashboard_df = tme_system.process_live_market_matrix()
+print(active_dashboard_df.to_string(index=False))
+```
+
+
